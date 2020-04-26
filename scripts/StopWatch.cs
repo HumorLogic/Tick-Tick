@@ -19,15 +19,15 @@ namespace Tick_Tick
         {
             isRun = false;
             timeStr = "00:00:00;";
-            secend=0;
+            secend = 30;
             minute = 0;
             hour = 0;
             secendStr = "00";
             minuteStr = "00";
             hourStr = "00";
         }
-        
-        public void  Start()
+
+        public void Start()
         {
             isRun = true;
         }
@@ -43,8 +43,27 @@ namespace Tick_Tick
             {
                 await Task.Delay(1000);
                 secend += 1;
-                if (secend > 9) { secendStr = secend.ToString(); }
+
+                //calculate secend
+                if (secend > 9)
+                {
+                    secendStr = secend.ToString();
+                    if (secend == 60) { minute += 1; secend = 0; }
+                }
                 else { secendStr = "0" + secend.ToString(); }
+
+                //calcutate minute
+                if (minute > 9) 
+                { 
+                    minuteStr = minute.ToString();
+                    if (minute == 60) { hour += 1; minute = 0; }
+                }
+                else { minuteStr = "0" + minute.ToString(); }
+
+                //calculate hour
+                if (hour > 9) { hourStr = hour.ToString(); }
+                else { hourStr = "0" + hour.ToString(); }
+             
 
                 timeStr = $"{hourStr}:{minuteStr}:{secendStr}";
                 textBlock.Text = timeStr;

@@ -36,8 +36,8 @@ namespace Tick_Tick
             
 
             this.InitializeComponent();
-            imageStart = Image_Loaded("ms-appx:///Assets/start.png");
-            imagePause = Image_Loaded("ms-appx:///Assets/pause.png");
+            imageStart = LoadImage("ms-appx:///Assets/start.png");
+            imagePause = LoadImage("ms-appx:///Assets/pause.png");
 
         }
 
@@ -58,12 +58,10 @@ namespace Tick_Tick
                 isStart = !isStart;
                 startPauseIcon.Source = imageStart;
             }
-
-            
             
         }
 
-       private ImageSource Image_Loaded(string url)
+       private ImageSource LoadImage(string url)
         {
                 Image img = new Image();
            

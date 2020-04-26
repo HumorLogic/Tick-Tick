@@ -11,11 +11,8 @@ namespace Tick_Tick
     {
         private bool isRun;
         private string timeStr;
-        private int secend;
-        private string secendStr;
-        private string minuteStr;
-        private string hourStr;
-
+        private int secend, minute, hour;
+        private string secendStr, minuteStr, hourStr;
 
 
         public StopWatch()
@@ -23,6 +20,8 @@ namespace Tick_Tick
             isRun = false;
             timeStr = "00:00:00;";
             secend=0;
+            minute = 0;
+            hour = 0;
             secendStr = "00";
             minuteStr = "00";
             hourStr = "00";
@@ -50,7 +49,6 @@ namespace Tick_Tick
                 timeStr = $"{hourStr}:{minuteStr}:{secendStr}";
                 textBlock.Text = timeStr;
             }
-
 
         }
     }

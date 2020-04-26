@@ -101,7 +101,7 @@
                 />
             <Button Background="Transparent"
                             x:Name="funStartPauseBtn"
-                          Margin="0,120,0,0" Click="startPauseBtn_Click"
+                          Margin="0,120,0,0" Click="funStartPauseBtn_Click"
                             >
                 <Image x:Name="funStartPauseIcon"
                               Source="Assets/start.png"

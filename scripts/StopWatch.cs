@@ -9,10 +9,10 @@ namespace Tick_Tick
 {
     class StopWatch
     {
-        private bool isRun;
+        public bool isRun;
         private string timeStr;
         private int millisec,secend, minute, hour;
-        private string millisecStr,secendStr, minuteStr, hourStr;
+        private string secendStr, minuteStr, hourStr;
 
 
         public StopWatch()
@@ -26,7 +26,7 @@ namespace Tick_Tick
             secendStr = "00";
             minuteStr = "00";
             hourStr = "00";
-            millisecStr = "00";
+          
         }
 
         public void Start()

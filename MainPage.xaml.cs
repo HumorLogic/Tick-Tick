@@ -26,7 +26,7 @@ namespace Tick_Tick
     public sealed partial class MainPage : Page
     {
         private bool isStart;
-        private StopWatch stopWatch;
+        private StopWatch sw, swFun; 
         private ImageSource imageStart;
         private ImageSource imagePause;
 
@@ -43,25 +43,33 @@ namespace Tick_Tick
 
         private void startPauseBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (stopWatch == null) { stopWatch = new StopWatch(); }
+            if (sw == null) { sw = new StopWatch(); }
+            StartOrPauseStopWatch(sw,timeText, millisecText,startPauseIcon);
+        }
 
-            if (!isStart)
+        private void funStartPauseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (swFun == null) { swFun = new StopWatch(); }
+            StartOrPauseStopWatch(swFun,funTimeText, funMillisecText,funStartPauseIcon);
+        }
+
+        private void StartOrPauseStopWatch(StopWatch stopWatch,TextBlock timeText,TextBlock millisecText,Image btnImg)
+        {
+            
+            if (!stopWatch.isRun)
             {
                 stopWatch.Start();
-                isStart = !isStart;
-                stopWatch.GetTime(timeText,millisecText);
-                startPauseIcon.Source = imagePause;
+                stopWatch.GetTime(timeText, millisecText);
+                btnImg.Source = imagePause;
             }
             else
             {
                 stopWatch.Pause();
-                isStart = !isStart;
-                startPauseIcon.Source = imageStart;
+                btnImg.Source = imageStart;
             }
-            
         }
-
-       private ImageSource LoadImage(string url)
+     
+        private ImageSource LoadImage(string url)
         {
                 Image img = new Image();
            
@@ -71,5 +79,7 @@ namespace Tick_Tick
                 img.Source = bitmapImage;
                 return img.Source;
         }
+
+    
     }
 }

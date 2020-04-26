@@ -20,9 +20,9 @@ namespace Tick_Tick
             isRun = false;
             timeStr = "00:00:00;";
             millisec = 0;
-            secend = 30;
-            minute = 0;
-            hour = 0;
+            secend = 45;
+            minute = 58;
+            hour = 2;
             secendStr = "00";
             minuteStr = "00";
             hourStr = "00";
@@ -48,10 +48,10 @@ namespace Tick_Tick
 
                 if (millisec > 9) {
                     if (millisec > 99) { millisec = 0; secend += 1; }
-                    millisecText.Text = millisec.ToString();
+                    millisecText.Text = "."+millisec.ToString();
                   
                 }
-                else { millisecText.Text = "0" + millisec.ToString(); }
+                else { millisecText.Text = ".0" + millisec.ToString(); }
               
 
                 //calculate secend

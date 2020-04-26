@@ -6,16 +6,21 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource SystemAccentColorLight3}">
 
-    <Grid>
+    
+
+    <Grid Background="{ThemeResource HyperlinkPressedForegroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
+        
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" >
+            
             <TextBlock 
                             Margin="50,120,0,0" 
                             Text="学习时间" 
@@ -24,20 +29,29 @@
                             Height="89" 
                             Width="68" 
                             RenderTransformOrigin="0.529,0.569" 
-                            FontSize="30" FontWeight="Bold"/>
+                            FontSize="30" 
+                            Foreground="White"
+                            FontWeight="Bold"/>
             <TextBlock Text="："
                                FontSize="50" 
                                 Height="84"
-                                Margin="0,80,0,0" Width="19"/>
+                                Margin="0,80,0,0"
+                                Foreground="White"
+                                Width="19"/>
             <TextBlock  x:Name="timeText"
                                Text="00:00:00"
                                FontSize="150"
-                        Margin="10,50,0,0"
+                                Margin="10,50,0,0"
+                                Foreground="White"
+                                FontWeight="Bold"
                 />
             <TextBlock  x:Name="millisecText"
                                Text=".00"
                                FontSize="50"
-                               Margin="10,120,0,0" Height="66" Width="109"
+                               Margin="10,120,0,0" 
+                               Foreground="White"
+                               Height="66" 
+                               Width="109"
                 />
             <Button Background="Transparent"
                             x:Name="startPauseBtn"
@@ -48,10 +62,55 @@
                               Width="50"/>
 
             </Button>
+            
+          
+
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock 
+                            Margin="50,120,0,0" 
+                            Text="休息时间" 
+                            TextWrapping="Wrap" 
+                            VerticalAlignment="Top" 
+                             Foreground="White"
+                            Height="89" 
+                            Width="68" 
+                            
+                            RenderTransformOrigin="0.529,0.569" 
+                            FontSize="30" FontWeight="Bold"/>
+            <TextBlock Text="："
+                               FontSize="50" 
+                                Height="84"
+                                Foreground="White"
+                                Margin="0,80,0,0" 
+                                Width="19"/>
+            <TextBlock  x:Name="funTimeText"
+                               Text="00:00:00"
+                               FontSize="150"
+                               Foreground="White"
+                                Margin="10,50,0,0"
+                />
+            <TextBlock  x:Name="funMillisecText"
+                               Text=".00"
+                               FontSize="50"
+                               Margin="10,120,0,0"
+                               Foreground="White"
+                                Height="66"
+                                Width="109"
+                />
+            <Button Background="Transparent"
+                            x:Name="funStartPauseBtn"
+                          Margin="0,120,0,0" Click="startPauseBtn_Click"
+                            >
+                <Image x:Name="funStartPauseIcon"
+                              Source="Assets/start.png"
+                              Width="50"/>
+
+            </Button>
 
 
         </StackPanel>
-
 
     </Grid>
 </Page>

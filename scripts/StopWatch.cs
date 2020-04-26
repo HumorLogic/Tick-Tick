@@ -11,20 +11,22 @@ namespace Tick_Tick
     {
         private bool isRun;
         private string timeStr;
-        private int secend, minute, hour;
-        private string secendStr, minuteStr, hourStr;
+        private int millisec,secend, minute, hour;
+        private string millisecStr,secendStr, minuteStr, hourStr;
 
 
         public StopWatch()
         {
             isRun = false;
             timeStr = "00:00:00;";
+            millisec = 0;
             secend = 30;
             minute = 0;
             hour = 0;
             secendStr = "00";
             minuteStr = "00";
             hourStr = "00";
+            millisecStr = "00";
         }
 
         public void Start()
@@ -37,12 +39,20 @@ namespace Tick_Tick
             isRun = false;
         }
 
-        public async void GetTime(TextBlock textBlock)
+        public async void GetTime(TextBlock textBlock,TextBlock millisecText)
         {
             while (isRun)
             {
-                await Task.Delay(1000);
-                secend += 1;
+               await Task.Delay(10);
+                millisec += 1;
+
+                if (millisec > 9) {
+                    if (millisec > 99) { millisec = 0; secend += 1; }
+                    millisecText.Text = millisec.ToString();
+                  
+                }
+                else { millisecText.Text = "0" + millisec.ToString(); }
+              
 
                 //calculate secend
                 if (secend > 9)

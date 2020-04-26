@@ -49,7 +49,7 @@ namespace Tick_Tick
             {
                 stopWatch.Start();
                 isStart = !isStart;
-                stopWatch.GetTime(timeText);
+                stopWatch.GetTime(timeText,millisecText);
                 startPauseIcon.Source = imagePause;
             }
             else

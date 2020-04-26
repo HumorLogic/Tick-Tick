@@ -30,9 +30,14 @@
                                FontSize="150"
                         Margin="10,50,0,0"
                 />
+            <TextBlock  x:Name="millisecText"
+                               Text=".00"
+                               FontSize="50"
+                               Margin="10,120,0,0" Height="66" Width="109"
+                />
             <Button Background="Transparent"
                             x:Name="startPauseBtn"
-                          Margin="50,120,0,0" Click="startPauseBtn_Click"
+                          Margin="0,120,0,0" Click="startPauseBtn_Click"
                             >
                 <Image x:Name="startPauseIcon"
                               Source="Assets/start.png"

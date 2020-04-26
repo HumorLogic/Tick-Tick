@@ -17,14 +17,18 @@
 
         <StackPanel Grid.Row="1" Orientation="Horizontal">
             <TextBlock 
-                            Margin="100,130,0,0" 
-                            Text="学习时间:" 
+                            Margin="50,120,0,0" 
+                            Text="学习时间" 
                             TextWrapping="Wrap" 
                             VerticalAlignment="Top" 
-                            Height="85" 
-                            Width="133" 
+                            Height="89" 
+                            Width="68" 
                             RenderTransformOrigin="0.529,0.569" 
-                            FontSize="28" FontWeight="Bold"/>
+                            FontSize="30" FontWeight="Bold"/>
+            <TextBlock Text="："
+                               FontSize="50" 
+                                Height="84"
+                                Margin="0,80,0,0" Width="19"/>
             <TextBlock  x:Name="timeText"
                                Text="00:00:00"
                                FontSize="150"

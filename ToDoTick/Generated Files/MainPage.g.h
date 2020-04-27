@@ -11,8 +11,8 @@ namespace Windows {
     namespace UI {
         namespace Xaml {
             namespace Controls {
-                ref class TextBlock;
                 ref class Button;
+                ref class TextBlock;
                 ref class Image;
             }
         }
@@ -40,6 +40,7 @@ namespace ToDoTick
     
         class MainPage_obj1_Bindings;
     
+        private: ::Windows::UI::Xaml::Controls::Button^ btn;
         private: ::Windows::UI::Xaml::Controls::TextBlock^ funTimeText;
         private: ::Windows::UI::Xaml::Controls::TextBlock^ funMillisecText;
         private: ::Windows::UI::Xaml::Controls::Button^ funStartPauseBtn;

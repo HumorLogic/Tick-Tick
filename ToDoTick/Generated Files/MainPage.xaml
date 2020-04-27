@@ -36,14 +36,14 @@
                                 Margin="0,80,0,0"
                                 Foreground="White"
                                 Width="19"/>
-            <TextBlock  x:Name="timeText"
+            <TextBlock x:ConnectionId='7'  x:Name="timeText"
                                Text="00:00:00"
                                FontSize="150"
                                 Margin="10,50,0,0"
                                 Foreground="White"
                                 FontWeight="Bold"
                 />
-            <TextBlock  x:Name="millisecText"
+            <TextBlock x:ConnectionId='8'  x:Name="millisecText"
                                Text=".00"
                                FontSize="50"
                                Margin="10,120,0,0" 
@@ -51,11 +51,11 @@
                                Height="66" 
                                Width="109"
                 />
-            <Button Background="Transparent"
+            <Button x:ConnectionId='9' Background="Transparent"
                             x:Name="startPauseBtn"
-                          Margin="0,120,0,0" Click="startPauseBtn_Click" 
+                          Margin="0,120,0,0"                             
                             >
-                <Image x:Name="startPauseIcon"
+                <Image x:ConnectionId='10' x:Name="startPauseIcon"
                               Source="Assets/start.png"
                               Width="50"/>
 
@@ -83,13 +83,13 @@
                                 Foreground="White"
                                 Margin="0,80,0,0" 
                                 Width="19"/>
-            <TextBlock  x:Name="funTimeText"
+            <TextBlock x:ConnectionId='3'  x:Name="funTimeText"
                                Text="00:00:00"
                                FontSize="150"
                                Foreground="White"
                                 Margin="10,50,0,0"
                 />
-            <TextBlock  x:Name="funMillisecText"
+            <TextBlock x:ConnectionId='4'  x:Name="funMillisecText"
                                Text=".00"
                                FontSize="50"
                                Margin="10,120,0,0"
@@ -97,11 +97,11 @@
                                 Height="66"
                                 Width="109"
                 />
-            <Button Background="Transparent"
+            <Button x:ConnectionId='5' Background="Transparent"
                             x:Name="funStartPauseBtn"
                           Margin="0,120,0,0" 
                             >
-                <Image x:Name="funStartPauseIcon"
+                <Image x:ConnectionId='6' x:Name="funStartPauseIcon"
                               Source="Assets/start.png"
                               Width="50"/>
 
@@ -109,7 +109,7 @@
 
 
         </StackPanel>
-        <Button Content="Button"
+        <Button x:ConnectionId='2' Content="Button"
                 Name="btn"
                 Margin="469,70,0,0" 
                 Grid.Row="2"
@@ -117,4 +117,5 @@
 
     </Grid>
 </Page>
+
 

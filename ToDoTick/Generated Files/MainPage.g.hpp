@@ -28,8 +28,49 @@ void ::ToDoTick::MainPage::InitializeComponent()
 
 void ::ToDoTick::MainPage::Connect(int __connectionId, ::Platform::Object^ __target)
 {
-    __connectionId;         // unreferenced 
-    __target;               // unreferenced
+    switch (__connectionId)
+    {
+    case 2:
+        {
+            this->funTimeText = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(__target);
+        }
+        break;
+    case 3:
+        {
+            this->funMillisecText = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(__target);
+        }
+        break;
+    case 4:
+        {
+            this->funStartPauseBtn = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
+        }
+        break;
+    case 5:
+        {
+            this->funStartPauseIcon = safe_cast<::Windows::UI::Xaml::Controls::Image^>(__target);
+        }
+        break;
+    case 6:
+        {
+            this->timeText = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(__target);
+        }
+        break;
+    case 7:
+        {
+            this->millisecText = safe_cast<::Windows::UI::Xaml::Controls::TextBlock^>(__target);
+        }
+        break;
+    case 8:
+        {
+            this->startPauseBtn = safe_cast<::Windows::UI::Xaml::Controls::Button^>(__target);
+        }
+        break;
+    case 9:
+        {
+            this->startPauseIcon = safe_cast<::Windows::UI::Xaml::Controls::Image^>(__target);
+        }
+        break;
+    }
     _contentLoaded = true;
 }
 
